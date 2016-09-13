@@ -13,6 +13,9 @@ collectKeys(obj) --> ['course', 'best'];
 */
 
 var collectKeys = function(collection) {
+  for (var key in collectKeys){
+    console.log(key);
+  }
   // Your Code Here
 };
 
@@ -46,6 +49,8 @@ You'll need to remove all non-alphanumeric characters (punctuation, spaces and s
 */
 
 var isPalindrome = function(str) {
+    return str == str.split('').reverse().join('');
+}
   // Your Code Here
 };
 
@@ -57,6 +62,20 @@ var isPalindrome = function(str) {
  */
 
 var sumArray = function(arrayOfNums) {
+  var sum = 0;
+  for ( var i= 0; i< arrayOfNums.length; i++ ) {
+    var currentVal = arrayOfNumbs [i];
+    var previousSum = sum;
+    sum = previousSum + currentVal
+    };
+    return sum;
+    
+  // Your Code Here
+};
+  
+  
+sumArray(arrayOfNums);
+
   // Your Code Here
 };
 
@@ -71,10 +90,18 @@ Iterates through an array and returns true is every number is even
 Otherwise return false
  */
 
+var array = [1,2,3,4,5,6,7,8,9,10]
+
 var allNumbersEven = function(array) {
+  for (var i=0; i<array.length; i++){
+    if ( array % 2 === 1) {
+      return false
+  
+    }
+  }
   // Your Code Here
 };
-
+allNumbersEven(array)
 
 /*********************************************************************************************************************/
 /*
@@ -87,6 +114,7 @@ console.log(onlyPrimes) --> [7, 13, 71];
 
 var findPrimes = function(collection) {
     // Your Code Here
+
 
 };
 
